@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFrag">
+
+    <fragment
+        android:id="@+id/homeFrag"
+        android:name="com.example.countdownapp.HomeFrag"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFrag_to_setTimeFrag"
+            app:destination="@id/setTimeFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/setTimeFrag"
+        android:name="com.example.countdownapp.SetTimeFrag"
+        android:label="fragment_set_time"
+        tools:layout="@layout/fragment_set_time" >
+        <action
+            android:id="@+id/action_setTimeFrag_to_timerFrag"
+            app:destination="@id/timerFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/timerFrag"
+        android:name="com.example.countdownapp.TimerFrag"
+        android:label="fragment_timer"
+        tools:layout="@layout/fragment_timer" >
+        <action
+            android:id="@+id/action_timerFrag_to_homeFrag"
+            app:destination="@id/homeFrag" />
+    </fragment>
+</navigation>
